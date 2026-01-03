@@ -160,11 +160,11 @@ export const englishTexts: ILanguageTexts = {
           "Docker, Kubernetes, CI/CD pipelines, cloud-native deployments, and observability.",
       },
       {
-        name: "Blockchain & Web3",
-        id: "blockchain",
-        description:
-          "Solana smart contracts in Rust, wallet authentication, and decentralized apps.",
-      },
+  name: "Frontend Development",
+  id: "frontend",
+  description:
+    "Modern web interfaces using React and Next.js, including server-side rendering, component-driven architecture, and responsive design.",
+},
     ],
   },
 
