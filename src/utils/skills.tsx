@@ -2,8 +2,8 @@ import {
   SiGo, SiRust, SiTypescript, SiJavascript,
   SiPostgresql, SiMongodb, SiRedis,
   SiDocker, SiKubernetes, SiAmazon,
-   SiRabbitmq, SiApachekafka,
-  SiSolana, SiGrafana, SiPrometheus,
+   SiRabbitmq,
+  SiSolana, SiGrafana,
   SiAppwrite,
   SiNextdotjs,
   SiReact

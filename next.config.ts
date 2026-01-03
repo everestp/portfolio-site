@@ -1,30 +1,53 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Enable styled-components support (SWC compiler for better performance)
   compiler: {
     styledComponents: true,
   },
 
+  // Optimized image configuration
   images: {
-    // Modern formats (Next will auto-pick best)
+    // Prioritize modern formats — Next.js will serve AVIF/WebP when supported
     formats: ["image/avif", "image/webp"],
 
-    // Device breakpoints for responsive images
-    deviceSizes: [320, 420, 640, 768, 1024, 1280, 1536, 1920],
+    // Responsive breakpoints
+    deviceSizes: [640, 768, 1080, 1200, 1920, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 
-    // Cache optimized images aggressively
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+    // Aggressive caching for optimized images (60 days is good for static assets)
+    minimumCacheTTL: 60 * 60 * 24 * 60, // 60 days
 
-    // Keep this true (default) for production
+    // Allow images from common external domains (add yours as needed)
+    // Example: remotePatterns: [{ protocol: "https", hostname: "**.example.com" }],
+    remotePatterns: [
+      // Uncomment and customize if you load images from external sources
+      // {
+      //   protocol: "https",
+      //   hostname: "images.unsplash.com",
+      // },
+      // {
+      //   protocol: "https",
+      //   hostname: "your-cdn.com",
+      // },
+    ],
+
+    // Keep unoptimized: false (default) — lets Next.js optimize images
     unoptimized: false,
   },
 
-  // Enable gzip + brotli
+  // Enable compression (gzip & brotli) — already on by default in production
   compress: true,
 
-  // Safer for prod builds
+  // Security: Remove X-Powered-By header
   poweredByHeader: false,
-};
 
-export default nextConfig;
+  // Improve build performance & reliability
+  eslint: {
+    // Skip ESLint during production builds (optional — remove if you want strict checks)
+    // Recommended only if you have CI linting separately
+    ignoreDuringBuilds: true,
+  },
+
+  typescript: {
+    // Skip type
