@@ -28,7 +28,7 @@ interface IAppContext {
 export const AppContext = createContext<IAppContext | null>(null);
 
 const AppWrapper = ({ children }: { children: React.ReactNode }) => {
-	const [theme, setTheme] = useState<"dark" | "light">("dark");
+	const [theme, setTheme] = useState<"dark" | "light">("light");
 	const [language, setLanguage] = useState<LanguageKey>("en");
 
 	const pathname = usePathname();
