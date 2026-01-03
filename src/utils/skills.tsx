@@ -1,17 +1,42 @@
-import { 
-  SiGo, SiRust, SiTypescript, SiJavascript,
-  SiPostgresql, SiMongodb, SiRedis,
-  SiDocker, SiKubernetes, SiAmazon,
-   SiRabbitmq,
-  SiSolana, SiGrafana,
+import {
+  SiGo,
+  SiRust,
+  SiTypescript,
+  SiJavascript,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiDocker,
+  SiKubernetes,
+  SiAmazon,
+  SiRabbitmq,
+  SiSolana,
+  SiGrafana,
   SiAppwrite,
   SiNextdotjs,
-  SiReact
+  SiReact,
 } from "react-icons/si";
 
 import { FaGitAlt, FaServer, FaCubes, FaLink, FaCogs, FaDatabase } from "react-icons/fa";
+import { JSX } from "react";
 
-export const SKILLS = {
+export interface ISkill {
+  name: string;
+  icon: {
+    normal: JSX.Element;
+    large: JSX.Element;
+  };
+  type:
+    | "language"
+    | "frontend"
+    | "backend"
+    | "database"
+    | "messaging"
+    | "devops"
+    | "blockchain";
+}
+
+export const SKILLS: Record<string, ISkill> = {
   // ===== Languages =====
   golang: {
     name: "Golang",
@@ -29,23 +54,6 @@ export const SKILLS = {
     },
     type: "language",
   },
-  react: {
-  name: "React",
-  icon: {
-    normal: <SiReact size="1.1vw" color="#61DAFB" />,
-    large: <SiReact size="2vw" color="#61DAFB" />,
-  },
-  type: "frontend",
-},
-
-nextjs: {
-  name: "Next.js",
-  icon: {
-    normal: <SiNextdotjs size="1.1vw" color="#000000" />,
-    large: <SiNextdotjs size="2vw" color="#000000" />,
-  },
-  type: "frontend",
-},
   typescript: {
     name: "TypeScript",
     icon: {
@@ -62,60 +70,58 @@ nextjs: {
     },
     type: "language",
   },
-  appwrite: {
-  name: "Appwrite",
-  icon: {
-    normal: <SiAppwrite size="1.1vw" color="#FD366E" />,
-    large: <SiAppwrite size="2vw" color="#FD366E" />,
-  },
-  type: "backend",
-},
 
-  // ===== Backend & Distributed Systems =====
-  microservices: {
-    name: "Microservices",
+  // ===== Frontend =====
+  react: {
+    name: "React",
     icon: {
-      normal: <FaCubes size="1.1vw" color="#4CAF50" />,
-      large: <FaCubes size="2vw" color="#4CAF50" />,
+      normal: <SiReact size="1.1vw" color="#61DAFB" />,
+      large: <SiReact size="2vw" color="#61DAFB" />,
+    },
+    type: "frontend",
+  },
+  nextjs: {
+    name: "Next.js",
+    icon: {
+      normal: <SiNextdotjs size="1.1vw" color="#000000" />,
+      large: <SiNextdotjs size="2vw" color="#000000" />,
+    },
+    type: "frontend",
+  },
+
+  // ===== Backend Frameworks & Tools =====
+  goChi: {
+    name: "Chi (Go)",
+    icon: {
+      normal: <FaCogs size="1.1vw" color="#00ADD8" />,
+      large: <FaCogs size="2vw" color="#00ADD8" />,
     },
     type: "backend",
   },
-  oChi: {
-  name: "go-chi",
-  icon: {
-    normal: <FaCogs size="1.1vw" color="#00ADD8" />,
-    large: <FaCogs size="2vw" color="#00ADD8" />,
+  gin: {
+    name: "Gin (Go)",
+    icon: {
+      normal: <FaCogs size="1.1vw" color="#00ADD8" />,
+      large: <FaCogs size="2vw" color="#00ADD8" />,
+    },
+    type: "backend",
   },
-  type: "backend",
-},
-
-gin: {
-  name: "Gin",
-  icon: {
-    normal: <FaCogs size="1.1vw" color="#00ADD8" />,
-    large: <FaCogs size="2vw" color="#00ADD8" />,
+  fiber: {
+    name: "Fiber (Go)",
+    icon: {
+      normal: <FaCogs size="1.1vw" color="#00ADD8" />,
+      large: <FaCogs size="2vw" color="#00ADD8" />,
+    },
+    type: "backend",
   },
-  type: "backend",
-},
-
-fiber: {
-  name: "Fiber",
-  icon: {
-    normal: <FaCogs size="1.1vw" color="#00ADD8" />,
-    large: <FaCogs size="2vw" color="#00ADD8" />,
+  gorm: {
+    name: "GORM",
+    icon: {
+      normal: <FaDatabase size="1.1vw" color="#4DBA87" />,
+      large: <FaDatabase size="2vw" color="#4DBA87" />,
+    },
+    type: "backend",
   },
-  type: "backend",
-},
-
-gorm: {
-  name: "GORM",
-  icon: {
-    normal: <FaDatabase size="1.1vw" color="#4DBA87" />,
-    large: <FaDatabase size="2vw" color="#4DBA87" />,
-  },
-  type: "backend",
-},
- 
   restApi: {
     name: "REST APIs",
     icon: {
@@ -124,6 +130,24 @@ gorm: {
     },
     type: "backend",
   },
+  microservices: {
+    name: "Microservices",
+    icon: {
+      normal: <FaCubes size="1.1vw" color="#4CAF50" />,
+      large: <FaCubes size="2vw" color="#4CAF50" />,
+    },
+    type: "backend",
+  },
+  appwrite: {
+    name: "Appwrite",
+    icon: {
+      normal: <SiAppwrite size="1.1vw" color="#FD366E" />,
+      large: <SiAppwrite size="2vw" color="#FD366E" />,
+    },
+    type: "backend",
+  },
+
+  // ===== Messaging =====
   rabbitmq: {
     name: "RabbitMQ",
     icon: {
@@ -132,7 +156,6 @@ gorm: {
     },
     type: "messaging",
   },
-  
 
   // ===== Databases =====
   postgresql: {
@@ -194,7 +217,7 @@ gorm: {
     type: "devops",
   },
   observability: {
-    name: "Observability",
+    name: "Observability (Grafana/Prometheus)",
     icon: {
       normal: <SiGrafana size="1.1vw" color="#F46800" />,
       large: <SiGrafana size="2vw" color="#F46800" />,

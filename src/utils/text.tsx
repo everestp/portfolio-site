@@ -1,6 +1,18 @@
 import { JSX } from "react";
 import { SKILLS, ISkill } from "./skills";
 
+export interface IProject {
+  id: string;
+  name: string;
+  description: string;
+  images: string[];
+  functionality: string[];
+  technologies: ISkill[];
+  livePreview?: string;
+  github?: string;
+  primaryColor?: string; // Now properly defined
+}
+
 export interface ILanguageTexts {
   aboutMe: {
     name: string;
@@ -51,16 +63,7 @@ export interface ILanguageTexts {
     description: string;
     functionalities: string;
     technologies: string;
-    projectList: {
-      id: string;
-      name: string;
-      description: string;
-      images: string[];
-      functionality: string[];
-      technologies: ISkill[];
-      livePreview?: string;
-      github?: string;
-    }[];
+    projectList: IProject[]; // Explicitly typed
   };
   ai: {
     chatWithAi: string;
@@ -157,8 +160,8 @@ export const englishTexts: ILanguageTexts = {
           "Docker, Kubernetes, CI/CD pipelines, cloud-native deployments, and observability.",
       },
       {
-        name: "Frontend",
-        id: "frontend",
+        name: "Blockchain & Web3",
+        id: "blockchain",
         description:
           "Solana smart contracts in Rust, wallet authentication, and decentralized apps.",
       },
@@ -192,6 +195,7 @@ export const englishTexts: ILanguageTexts = {
         ],
         technologies: [SKILLS.appwrite, SKILLS.typescript, SKILLS.react],
         livePreview: "https://www.exampaper.org",
+        primaryColor: "#4a6cf7", // Appwrite-inspired blue
       },
       {
         id: "codenumber",
@@ -211,6 +215,7 @@ export const englishTexts: ILanguageTexts = {
         ],
         technologies: [SKILLS.appwrite, SKILLS.typescript, SKILLS.react],
         livePreview: "https://www.codenumber.net",
+        primaryColor: "#00c2b3", // Fresh teal/cyan
       },
       {
         id: "godec",
@@ -230,6 +235,7 @@ export const englishTexts: ILanguageTexts = {
         ],
         technologies: [SKILLS.rust, SKILLS.solana, SKILLS.react],
         livePreview: "https://www.godec.xyz",
+        primaryColor: "#a855f7", // Solana purple
       },
     ],
   },
