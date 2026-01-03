@@ -12,13 +12,16 @@ import AboutMe from "../AboutMe/AboutMe";
 import { ILanguageTexts, LANGUAGE } from "@/utils/text";
 import { usePathname } from "next/navigation";
 
+// Define available languages based on what's actually in LANGUAGE
+type LanguageKey = keyof typeof LANGUAGE; // Currently just "en"
+
 interface IAppContext {
 	theme: ITheme;
-	toggleTheme: () => void;
-	currentLanguage: "en" | "fr";
-	toggleLanguage: () => void;
-	languageTexts: ILanguageTexts;
 	themeType: "light" | "dark";
+	toggleTheme: () => void;
+	languageTexts: ILanguageTexts;
+	currentLanguage: LanguageKey;
+	toggleLanguage: () => void;
 	isHomePage: boolean;
 }
 
@@ -26,26 +29,29 @@ export const AppContext = createContext<IAppContext | null>(null);
 
 const AppWrapper = ({ children }: { children: React.ReactNode }) => {
 	const [theme, setTheme] = useState<"light" | "dark">("light");
-	const [language, setLanguage] = useState<"en" | "fr">("en");
+	const [language, setLanguage] = useState<LanguageKey>("en");
+
 	const pathname = usePathname();
-	const isHomePage = pathname === "/"
+	const isHomePage = pathname === "/";
 
 	const toggleTheme = () => {
-		setTheme(theme === "light" ? "dark" : "light");
+		setTheme((prev) => (prev === "light" ? "dark" : "light"));
 	};
 
 	const toggleLanguage = () => {
-		setLanguage(language === "fr" ? "en" : "fr");
+		// When you add French later, this will automatically work
+		// For now, it stays on "en" since that's the only key
+		setLanguage((prev) => (prev === "en" ? "en" : "en")); // placeholder
 	};
 
-	const appContextValue = {
+	const appContextValue: IAppContext = {
 		theme: THEME[theme],
 		themeType: theme,
-		languageTexts: LANGUAGE[language],
+		languageTexts: LANGUAGE[language], // Now type-safe!
+		currentLanguage: language,
 		toggleTheme,
 		toggleLanguage,
-		currentLanguage: language,
-		isHomePage
+		isHomePage,
 	};
 
 	return (
