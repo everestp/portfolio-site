@@ -10,16 +10,16 @@ export const AboutMeContainer = styled.div`
 
 	.name {
 		text-align: center;
-		font-size: 1.9vw;
+		font-size: 2.9vw;
 		margin-top: 1vw;
 	}
 
 	.title {
 		text-align: center;
-		font-size: 1.7vw;
+		font-size: 1.1vw;
 		opacity: 0.6;
 		font-weight: bold;
-		font-family: "Jim Nightshade";
+		// font-family: "Jim Nightshade";
 	}
 
 	.summary {

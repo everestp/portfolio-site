@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { SKILLS } from "./skills";
+import { SKILLS, ISkill } from "./skills";
 
 export interface ILanguageTexts {
   aboutMe: {
@@ -32,14 +32,7 @@ export interface ILanguageTexts {
       endDate: string;
       companyDescription: string;
       responsibilities: string[];
-      technologies: {
-        name: string;
-        icon: {
-          normal: JSX.Element;
-          large: JSX.Element;
-        };
-        type: string;
-      }[];
+      technologies: ISkill[];
     }[];
   };
   skills: {
@@ -64,7 +57,7 @@ export interface ILanguageTexts {
       description: string;
       images: string[];
       functionality: string[];
-      technologies: any[];
+      technologies: ISkill[];
       livePreview?: string;
       github?: string;
     }[];
@@ -82,96 +75,10 @@ export interface ILanguageTexts {
 export const englishTexts: ILanguageTexts = {
   aboutMe: {
     name: "Everest Paudel",
-    title: "Backend Engineer (Golang) :: DevOps ",
+    title: "Backend Engineer (Golang) :: DevOps",
     description:
-      "Backend-focused engineer specializing in Golang, distributed systems, and cloud-native architecture. I build scalable APIs, event-driven microservices, and reliable infrastructure using Docker, Kubernetes, and AWS. ",
+      "Backend-focused engineer specializing in Golang, distributed systems, and cloud-native architecture. I build scalable APIs, event-driven microservices, and reliable infrastructure using Docker, Kubernetes, and AWS.",
     downloadResume: "Download Resume",
-  },
-
-  projects: {
-    title: "Projects",
-    viewProjects: "View All Projects",
-    viewLivePreview: "Live Preview",
-    description: "Description",
-    functionalities: "Key Features",
-    technologies: "Technologies",
-    projectList: [
-      {
-        id: "exampaper",
-        name: "ExamPaper.org",
-        description:
-          "Educational platform providing academic resources and mock exams.",
-        images: [
-            "/images/exampaper/1.png",
-            "/images/exampaper/2.png",
-            "/images/exampaper/3.png",
-            "/images/exampaper/4.png",
-            "/images/exampaper/5.png"
-
-
-        ],
-        functionality: [
-          "Authentication & role-based access",
-          "Mock tests & exam library",
-          "Search and filtering",
-        ],
-        technologies: [
-          SKILLS.appwrite,
-          SKILLS.typescript,
-          SKILLS.react,
-        ],
-        livePreview: "https://www.exampaper.org",
-      },
-      {
-        id: "codenumber",
-        name: "CodeNumber.net",
-        description:
-          "Coding education platform aligned with Tribhuvan University syllabus.",
-        images: [
-            "/images/codenumber/1.png",
-              "/images/codenumber/2.png",
-                "/images/codenumber/3.png",
-                  "/images/codenumber/4.png",
-
-
-        ],
-        functionality: [
-          "Monaco editor for in-browser coding",
-          "Structured syllabus-based learning",
-          "Authentication & storage",
-        ],
-        technologies: [
-          SKILLS.appwrite,
-          SKILLS.typescript,
-          SKILLS.react,
-        ],
-        livePreview: "https://www.codenumber.net",
-      },
-      {
-        id: "godec",
-        name: "Godec.xyz",
-        description:
-          "Decentralized Web3 platform built on Solana with on-chain applications.",
-        images: [
-            "/images/godec/1.png",
-             "/images/godec/2.png",
-              "/images/godec/3.png",
-               "/images/godec/4.png",
-        
-        ],
-        functionality: [
-          "Wallet-based authentication",
-          "On-chain Todo, Notes, Voting",
-          "Censorship-resistant data ownership",
-        ],
-        technologies: [
-          SKILLS.rust,
-          SKILLS.solana,
-           SKILLS.react,
-        ],
-        livePreview: "https://www.godec.xyz",
-      },
-    ],
   },
 
   education: {
@@ -254,6 +161,75 @@ export const englishTexts: ILanguageTexts = {
         id: "frontend",
         description:
           "Solana smart contracts in Rust, wallet authentication, and decentralized apps.",
+      },
+    ],
+  },
+
+  projects: {
+    title: "Projects",
+    viewProjects: "View All Projects",
+    viewLivePreview: "Live Preview",
+    description: "Description",
+    functionalities: "Key Features",
+    technologies: "Technologies",
+    projectList: [
+      {
+        id: "exampaper",
+        name: "ExamPaper.org",
+        description:
+          "Educational platform providing academic resources and mock exams.",
+        images: [
+          "/images/exampaper/1.png",
+          "/images/exampaper/2.png",
+          "/images/exampaper/3.png",
+          "/images/exampaper/4.png",
+          "/images/exampaper/5.png",
+        ],
+        functionality: [
+          "Authentication & role-based access",
+          "Mock tests & exam library",
+          "Search and filtering",
+        ],
+        technologies: [SKILLS.appwrite, SKILLS.typescript, SKILLS.react],
+        livePreview: "https://www.exampaper.org",
+      },
+      {
+        id: "codenumber",
+        name: "CodeNumber.net",
+        description:
+          "Coding education platform aligned with Tribhuvan University syllabus.",
+        images: [
+          "/images/codenumber/1.png",
+          "/images/codenumber/2.png",
+          "/images/codenumber/3.png",
+          "/images/codenumber/4.png",
+        ],
+        functionality: [
+          "Monaco editor for in-browser coding",
+          "Structured syllabus-based learning",
+          "Authentication & storage",
+        ],
+        technologies: [SKILLS.appwrite, SKILLS.typescript, SKILLS.react],
+        livePreview: "https://www.codenumber.net",
+      },
+      {
+        id: "godec",
+        name: "Godec.xyz",
+        description:
+          "Decentralized Web3 platform built on Solana with on-chain applications.",
+        images: [
+          "/images/godec/1.png",
+          "/images/godec/2.png",
+          "/images/godec/3.png",
+          "/images/godec/4.png",
+        ],
+        functionality: [
+          "Wallet-based authentication",
+          "On-chain Todo, Notes, Voting",
+          "Censorship-resistant data ownership",
+        ],
+        technologies: [SKILLS.rust, SKILLS.solana, SKILLS.react],
+        livePreview: "https://www.godec.xyz",
       },
     ],
   },
