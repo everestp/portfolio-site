@@ -1,3 +1,4 @@
+
 import {
   SiGo,
   SiRust,
@@ -15,9 +16,27 @@ import {
   SiAppwrite,
   SiNextdotjs,
   SiReact,
+  SiNodedotjs,
+  SiNestjs,
+  SiTailwindcss,
+  SiJenkins,
+  SiJsonwebtokens,
 } from "react-icons/si";
 
-import { FaGitAlt, FaServer, FaCubes, FaLink, FaCogs, FaDatabase } from "react-icons/fa";
+import {
+  FaGitAlt,
+  FaServer,
+  FaCubes,
+  FaLink,
+  FaCogs,
+  FaDatabase,
+  FaCode,
+  FaShieldAlt,
+  FaNetworkWired,
+  FaLock,
+  FaExchangeAlt,
+} from "react-icons/fa";
+
 import { JSX } from "react";
 
 export interface ISkill {
@@ -37,7 +56,10 @@ export interface ISkill {
 }
 
 export const SKILLS: Record<string, ISkill> = {
-  // ===== Languages =====
+  // =========================================================
+  // LANGUAGES
+  // =========================================================
+
   golang: {
     name: "Golang",
     icon: {
@@ -46,6 +68,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "language",
   },
+
   rust: {
     name: "Rust",
     icon: {
@@ -54,6 +77,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "language",
   },
+
   typescript: {
     name: "TypeScript",
     icon: {
@@ -62,6 +86,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "language",
   },
+
   javascript: {
     name: "JavaScript",
     icon: {
@@ -71,7 +96,28 @@ export const SKILLS: Record<string, ISkill> = {
     type: "language",
   },
 
-  // ===== Frontend =====
+  sql: {
+    name: "SQL",
+    icon: {
+      normal: <FaDatabase size="1.1vw" color="#4479A1" />,
+      large: <FaDatabase size="2vw" color="#4479A1" />,
+    },
+    type: "language",
+  },
+
+  cpp: {
+    name: "C/C++",
+    icon: {
+      normal: <FaCode size="1.1vw" color="#00599C" />,
+      large: <FaCode size="2vw" color="#00599C" />,
+    },
+    type: "language",
+  },
+
+  // =========================================================
+  // FRONTEND
+  // =========================================================
+
   react: {
     name: "React",
     icon: {
@@ -80,6 +126,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "frontend",
   },
+
   nextjs: {
     name: "Next.js",
     icon: {
@@ -89,7 +136,37 @@ export const SKILLS: Record<string, ISkill> = {
     type: "frontend",
   },
 
-  // ===== Backend Frameworks & Tools =====
+  tailwind: {
+    name: "Tailwind CSS",
+    icon: {
+      normal: <SiTailwindcss size="1.1vw" color="#06B6D4" />,
+      large: <SiTailwindcss size="2vw" color="#06B6D4" />,
+    },
+    type: "frontend",
+  },
+
+  // =========================================================
+  // BACKEND
+  // =========================================================
+
+  nodejs: {
+    name: "Node.js",
+    icon: {
+      normal: <SiNodedotjs size="1.1vw" color="#339933" />,
+      large: <SiNodedotjs size="2vw" color="#339933" />,
+    },
+    type: "backend",
+  },
+
+  nestjs: {
+    name: "NestJS",
+    icon: {
+      normal: <SiNestjs size="1.1vw" color="#E0234E" />,
+      large: <SiNestjs size="2vw" color="#E0234E" />,
+    },
+    type: "backend",
+  },
+
   goChi: {
     name: "Chi (Go)",
     icon: {
@@ -98,6 +175,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "backend",
   },
+
   gin: {
     name: "Gin (Go)",
     icon: {
@@ -106,6 +184,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "backend",
   },
+
   fiber: {
     name: "Fiber (Go)",
     icon: {
@@ -114,6 +193,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "backend",
   },
+
   gorm: {
     name: "GORM",
     icon: {
@@ -122,6 +202,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "backend",
   },
+
   restApi: {
     name: "REST APIs",
     icon: {
@@ -130,6 +211,25 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "backend",
   },
+
+  grpc: {
+    name: "gRPC",
+    icon: {
+      normal: <FaExchangeAlt size="1.1vw" color="#244C5A" />,
+      large: <FaExchangeAlt size="2vw" color="#244C5A" />,
+    },
+    type: "backend",
+  },
+
+  websockets: {
+    name: "WebSockets",
+    icon: {
+      normal: <FaNetworkWired size="1.1vw" color="#6366F1" />,
+      large: <FaNetworkWired size="2vw" color="#6366F1" />,
+    },
+    type: "backend",
+  },
+
   microservices: {
     name: "Microservices",
     icon: {
@@ -138,6 +238,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "backend",
   },
+
   appwrite: {
     name: "Appwrite",
     icon: {
@@ -147,7 +248,10 @@ export const SKILLS: Record<string, ISkill> = {
     type: "backend",
   },
 
-  // ===== Messaging =====
+  // =========================================================
+  // MESSAGING
+  // =========================================================
+
   rabbitmq: {
     name: "RabbitMQ",
     icon: {
@@ -157,7 +261,10 @@ export const SKILLS: Record<string, ISkill> = {
     type: "messaging",
   },
 
-  // ===== Databases =====
+  // =========================================================
+  // DATABASES
+  // =========================================================
+
   postgresql: {
     name: "PostgreSQL",
     icon: {
@@ -166,6 +273,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "database",
   },
+
   mongodb: {
     name: "MongoDB",
     icon: {
@@ -174,6 +282,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "database",
   },
+
   redis: {
     name: "Redis",
     icon: {
@@ -183,7 +292,10 @@ export const SKILLS: Record<string, ISkill> = {
     type: "database",
   },
 
-  // ===== DevOps & Cloud =====
+  // =========================================================
+  // DEVOPS & CLOUD
+  // =========================================================
+
   docker: {
     name: "Docker",
     icon: {
@@ -192,6 +304,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "devops",
   },
+
   kubernetes: {
     name: "Kubernetes",
     icon: {
@@ -200,6 +313,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "devops",
   },
+
   aws: {
     name: "AWS",
     icon: {
@@ -208,6 +322,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "devops",
   },
+
   git: {
     name: "Git",
     icon: {
@@ -216,8 +331,18 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "devops",
   },
+
+  jenkins: {
+    name: "Jenkins",
+    icon: {
+      normal: <SiJenkins size="1.1vw" color="#D24939" />,
+      large: <SiJenkins size="2vw" color="#D24939" />,
+    },
+    type: "devops",
+  },
+
   observability: {
-    name: "Observability (Grafana/Prometheus)",
+    name: "Observability",
     icon: {
       normal: <SiGrafana size="1.1vw" color="#F46800" />,
       large: <SiGrafana size="2vw" color="#F46800" />,
@@ -225,7 +350,10 @@ export const SKILLS: Record<string, ISkill> = {
     type: "devops",
   },
 
-  // ===== Blockchain =====
+  // =========================================================
+  // BLOCKCHAIN
+  // =========================================================
+
   solana: {
     name: "Solana",
     icon: {
@@ -234,6 +362,7 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "blockchain",
   },
+
   smartContracts: {
     name: "Smart Contracts",
     icon: {
@@ -241,5 +370,76 @@ export const SKILLS: Record<string, ISkill> = {
       large: <FaLink size="2vw" color="#8E44AD" />,
     },
     type: "blockchain",
+  },
+
+  anchor: {
+    name: "Anchor",
+    icon: {
+      normal: <FaLink size="1.1vw" color="#9945FF" />,
+      large: <FaLink size="2vw" color="#9945FF" />,
+    },
+    type: "blockchain",
+  },
+
+  splTokens: {
+    name: "SPL Tokens",
+    icon: {
+      normal: <SiSolana size="1.1vw" color="#9945FF" />,
+      large: <SiSolana size="2vw" color="#9945FF" />,
+    },
+    type: "blockchain",
+  },
+
+  // =========================================================
+  // SECURITY
+  // =========================================================
+
+  jwt: {
+    name: "JWT",
+    icon: {
+      normal: <SiJsonwebtokens size="1.1vw" color="#000000" />,
+      large: <SiJsonwebtokens size="2vw" color="#000000" />,
+    },
+    type: "backend",
+  },
+
+  cryptography: {
+    name: "Cryptography",
+    icon: {
+      normal: <FaLock size="1.1vw" color="#7C3AED" />,
+      large: <FaLock size="2vw" color="#7C3AED" />,
+    },
+    type: "backend",
+  },
+
+  replayProtection: {
+    name: "Replay Protection",
+    icon: {
+      normal: <FaShieldAlt size="1.1vw" color="#DC2626" />,
+      large: <FaShieldAlt size="2vw" color="#DC2626" />,
+    },
+    type: "backend",
+  },
+
+  // =========================================================
+  // SECURITY / APPLICATION TESTING
+  // =========================================================
+
+  owasp: {
+    name: "OWASP Top 10",
+    icon: {
+      normal: <FaShieldAlt size="1.1vw" color="#374151" />,
+      large: <FaShieldAlt size="2vw" color="#374151" />,
+    },
+    type: "backend",
+  },
+
+  burpSuite: {
+    name: "Burp Suite",
+    icon: {
+      normal: <FaShieldAlt size="1.1vw" color="#FF6633" />,
+      large: <FaShieldAlt size="2vw" color="#FF6633" />,
+    },
+    type: "backend",
   },
 };
