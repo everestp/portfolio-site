@@ -125,7 +125,7 @@ export const englishTexts: ILanguageTexts = {
 
     workHistoryList: [
       {
-        companyName: "Independent Projects & Open Source",
+        companyName: "Independent Projects",
         companyLogo: "⚙️",
         jobTitle: "Backend Engineer",
         startDate: "2024",
