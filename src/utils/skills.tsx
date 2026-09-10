@@ -380,6 +380,14 @@ export const SKILLS: Record<string, ISkill> = {
     },
     type: "blockchain",
   },
+  magicblock: {
+    name: "MagicBlock",
+    icon: {
+      normal: <FaCubes size="1.1vw" color="#6366F1" />,
+      large: <FaCubes size="2vw" color="#6366F1" />,
+    },
+    type: "blockchain",
+  },
 
   splTokens: {
     name: "SPL Tokens",
