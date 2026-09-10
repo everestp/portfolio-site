@@ -243,11 +243,11 @@ export const englishTexts: ILanguageTexts = {
           "/images/kipay/2.png",
           "/images/kipay/3.png",
           "/images/kipay/4.png",
-           "/images/kipay/5.png",
+          "/images/kipay/5.png",
           "/images/kipay/6.png",
           "/images/kipay/7.png",
           "/images/kipay/8.png",
-           "/images/kipay/9.png",
+          "/images/kipay/9.png",
           "/images/kipay/10.png",
           "/images/kipay/11.png",
           "/images/kipay/12.png",
@@ -284,7 +284,7 @@ export const englishTexts: ILanguageTexts = {
           "/images/breezo/2.png",
           "/images/breezo/3.png",
           "/images/breezo/4.png",
-            "/images/breezo/5.png",
+          "/images/breezo/5.png",
           "/images/breezo/6.png",
           "/images/breezo/7.png",
 
@@ -350,6 +350,82 @@ export const englishTexts: ILanguageTexts = {
         primaryColor: "#8b5cf6",
       },
 
+
+      {
+        id: "paydao",
+        name: "PayDAO",
+        description:
+          "Realtime DAO treasury governance protocol on Solana powered by MagicBlock Ephemeral Rollups, combining delegated realtime governance with programmable treasury execution and durable on-chain settlement.",
+        images: [
+          "/images/paydao/1.png",
+          "/images/paydao/2.png",
+          "/images/paydao/3.png",
+          "/images/paydao/4.png",
+          "/images/paydao/5.png",
+          "/images/paydao/6.png",
+          "/images/paydao/7.png",
+          "/images/paydao/8.png",
+          "/images/paydao/9.png",
+          "/images/paydao/10.png",
+        
+        ],
+        functionality: [
+          "Permissionless DAO group creation with program-controlled treasury accounts",
+          "SOL contributions with automatic member creation",
+          "Permissionless treasury proposal creation",
+          "Member-based voting with duplicate-vote protection",
+          "Aggregate vote tracking with vote-choice separation from VoteReceipt state",
+          "Treasury fund reservation for active proposals",
+          "Automatic treasury execution when governance conditions are satisfied",
+          "MagicBlock Ephemeral Rollup delegation for Group, Proposal, and Treasury state",
+          "Realtime governance state transitions through delegated execution",
+          "Atomic governance-state commits back to Solana",
+          "Commit and undelegate lifecycle for durable settlement",
+        ],
+        technologies: [
+          SKILLS.rust,
+          SKILLS.solana,
+          SKILLS.anchor,
+          SKILLS.magicblock,
+          SKILLS.react,
+          SKILLS.typescript,
+          SKILLS.vite,
+          SKILLS.tailwind,
+        ],
+        livePreview: "https://paymentdao.vercel.app/",
+        github: "https://github.com/everestp/paymentdao",
+        primaryColor: "#6366f1",
+      },
+
+
+
+
+      {
+        id: "godec",
+        name: "Godec.xyz",
+        description:
+          "Decentralized Web3 platform built on Solana featuring on-chain applications and wallet-based ownership.",
+        images: [
+          "/images/godec/1.png",
+          "/images/godec/2.png",
+          "/images/godec/3.png",
+          "/images/godec/4.png",
+        ],
+        functionality: [
+          "Wallet-based authentication",
+          "On-chain Todo application",
+          "On-chain Notes",
+          "On-chain Voting",
+          "Censorship-resistant data ownership",
+        ],
+        technologies: [
+          SKILLS.rust,
+          SKILLS.solana,
+          SKILLS.react,
+        ],
+        livePreview: "https://www.godec.xyz",
+        primaryColor: "#a855f7",
+      },
       {
         id: "exampaper",
         name: "ExamPaper.org",
@@ -401,33 +477,6 @@ export const englishTexts: ILanguageTexts = {
         ],
         livePreview: "https://www.codenumber.net",
         primaryColor: "#00c2b3",
-      },
-
-      {
-        id: "godec",
-        name: "Godec.xyz",
-        description:
-          "Decentralized Web3 platform built on Solana featuring on-chain applications and wallet-based ownership.",
-        images: [
-          "/images/godec/1.png",
-          "/images/godec/2.png",
-          "/images/godec/3.png",
-          "/images/godec/4.png",
-        ],
-        functionality: [
-          "Wallet-based authentication",
-          "On-chain Todo application",
-          "On-chain Notes",
-          "On-chain Voting",
-          "Censorship-resistant data ownership",
-        ],
-        technologies: [
-          SKILLS.rust,
-          SKILLS.solana,
-          SKILLS.react,
-        ],
-        livePreview: "https://www.godec.xyz",
-        primaryColor: "#a855f7",
       },
     ],
   },
