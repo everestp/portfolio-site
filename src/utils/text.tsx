@@ -367,7 +367,7 @@ export const englishTexts: ILanguageTexts = {
           "/images/paydao/8.png",
           "/images/paydao/9.png",
           "/images/paydao/10.png",
-        
+
         ],
         functionality: [
           "Permissionless DAO group creation with program-controlled treasury accounts",
@@ -389,7 +389,6 @@ export const englishTexts: ILanguageTexts = {
           SKILLS.magicblock,
           SKILLS.react,
           SKILLS.typescript,
-          SKILLS.vite,
           SKILLS.tailwind,
         ],
         livePreview: "https://paymentdao.vercel.app/",
@@ -423,7 +422,7 @@ export const englishTexts: ILanguageTexts = {
           SKILLS.solana,
           SKILLS.react,
         ],
-        livePreview: "https://www.godec.xyz",
+        livePreview: "https://solana-minihack.vercel.app",
         primaryColor: "#a855f7",
       },
       {
